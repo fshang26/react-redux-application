@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-application",
+  "version": "1.0.0",
+  "description": "Starter kit for react and redux application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fshang26/react-redux-application.git"
+  },
+  "author": "Feng Shang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fshang26/react-redux-application/issues"
+  },
+  "homepage": "https://github.com/fshang26/react-redux-application#readme"
+}
