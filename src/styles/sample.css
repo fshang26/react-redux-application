@@ -1,0 +1,5 @@
+/* CSS sample style: test working in both dev and prod builds */
+
+.sampleClass {
+  padding: 50px;
+}

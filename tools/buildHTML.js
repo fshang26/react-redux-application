@@ -11,7 +11,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
 
   const $ = cheerio.load(markup);
 
-  // since a separate spreadsheet is only utilized for the production build, need to dynamica
+  // since a separate spreadsheet is only utilized for the production build, need to dynamically generate
   $('head').prepend('<link rel="stylesheet" href="styles.css">');
 
   fs.writeFile('dist/index.html', $.html(), 'utf8', function (err) {
