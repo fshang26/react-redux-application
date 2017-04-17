@@ -8,7 +8,7 @@ class App extends React.Component {
   render () {
     // React Router will be passing child components as properties onto our app component, and tehn they will composed right here on the page;
     return (
-      <div className="container-fluid">
+      <div className="app-container">
         <Header
           loading={this.props.loading}
         />
