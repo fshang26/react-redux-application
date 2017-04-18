@@ -1,6 +1,6 @@
 export default {
   authors: [],
   courses: [],
-  htabsites: [],
+  sites: [],
   ajaxCallInProgress: 0
 };

@@ -18,9 +18,9 @@ import '../node_modules/toastr/build/toastr.min.css';
 
 // When would you pass initial state to this configureStore call? If you're wanting to rehydrate your store using some separate state that's pased down from the server or stored in local storage, then this is a good place to do so.
 const store = configureStore();
+store.dispatch(loadHTabSites());
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
-store.dispatch(loadHTabSites());
 
 render (
   <Provider store={store}>
