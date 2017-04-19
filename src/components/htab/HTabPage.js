@@ -6,20 +6,51 @@ import * as htabsitesActions from '../../actions/htabsitesActions';
 class HTabPage extends React.Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      selectedIndex: 1
+    };
+    this.siteRowHeader = this.siteRowHeader.bind(this);
+    this.siteRowContent = this.siteRowContent.bind(this);
   }
 
-  siteRow(site, index) {
-    return <li key={index}>{site.name}</li>;
+  siteRowHeader(site, index) {
+    let selectedClass = "htab-left-panel-li";
+    if (index === this.state.selectedIndex) {
+      selectedClass += " selected";
+    }
+    // TODO: move bind to constructor
+    return (<div
+            key={index}
+            onClick={this.onSelectTab.bind(this, index)}
+            className={selectedClass}>{site.name}</div>);
+  }
+
+  onSelectTab(index) {
+    // this.state.selectedIndex = index; // !!!! not working without calling this.forceUpdate(); should call setState()
+    this.setState({selectedIndex: index});
+  }
+
+  siteRowContent(site, index) {
+    if (index == this.state.selectedIndex) {
+      return (
+        <div key="{index}" className="htab-right-panel">
+          <h1>{site.name}</h1>
+          <div>{site.description}</div>
+        </div>
+      );
+    }
   }
 
   render() {
     const {sites} = this.props;
+    const {selectedIndex} = this.state;
+
     return (
       <div className="page page-htab">
-        <ul className="htab-left-panel">
-          {sites.map(this.siteRow)}
-        </ul>
-        <div className="htab-right-panel"></div>
+        <div className="htab-left-panel-ul">
+          {sites.map(this.siteRowHeader)}
+        </div>
+        {sites.map(this.siteRowContent)}
       </div>
     );
   }

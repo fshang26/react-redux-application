@@ -1,0 +1,44 @@
+@import 'styleguide';
+
+$ProximaFamily: "Proxima-Nova", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Font Weights */
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$heavy: 900;
+
+/* Font Sizes & Lineheights */
+$Proxima-XLargeS:48;
+$Proxima-XLargeH:48;
+
+$Proxima-LargeS: 30;
+$Proxima-LargeH: 36;
+
+$Proxima-MediumS: 22;
+$Proxima-MediumH: 32;
+
+$Proxima-XRegularS: 18;
+$Proxima-XRegularH: 28;
+
+$Proxima-RegularS: 16;
+$Proxima-RegularH: 24;
+
+$Proxima-SmallS: 13;
+$Proxima-SmallH: 18;
+
+$Proxima-XSmallS: 12;
+$Proxima-XSmallH: 16;
+
+$Proxima-XXSmallS: 10;
+$Proxima-XXSmallH: 12;
+
+
+@mixin ProximaRegular-Regular {
+  $REMsize: #{$Proxima-RegularS / $REMdem}rem;
+  $REMheight: #{$Proxima-RegularH / $REMdem}rem;
+  font: $regular #{$Proxima-RegularS}px / #{$Proxima-RegularH}px "Proxima-Nova", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: $regular $REMsize / $REMheight "Proxima-Nova", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+

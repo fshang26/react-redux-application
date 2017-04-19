@@ -1,11 +1,34 @@
+@import 'Proxima-Nova';
+
 // colors
-$grey: #525153;
-$light-grey: #ebebeb;
+$dark-grey: #333;
+$nav-grey: #555;
+$grey: #ccc;
+$light-grey: #f9f9f9;
+
+$blue: #0079c1;
+$light-blue: #00a8df;
+$dark-blue: #0056B7;
+
+$yellow: #ffc500;
+$red: #e3002a;
+$green: #00b03f;
+$purple: #675AC6;
+$magenta: #C700A0;
+$orange: #F35B0F;
+$turquoise: #009BA5;
+
+$white: #fff;
+$black: #000;
 
 #app {
   height: 100vh;
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 20px;
+  @include ProximaRegular-Regular;
+  color: $dark-grey;
+  ul {
+  }
+
   .app-header {
     padding-bottom: 20px;
   }
@@ -15,15 +38,34 @@ $light-grey: #ebebeb;
       height: calc(100% - 36px);
     }
     .page-htab {
-      .htab-left-panel {
+      .htab-left-panel-ul {
         float: left;
-        width: 250px;
+        width: 20%;
         height: 100%;
-        background-color: $light-grey;
+        background-color: $grey;
+        .htab-left-panel-li {
+          font-size: 24px;
+          height: 56px;
+          line-height: 56px;
+          cursor: pointer;
+          padding-left: 10px;
+          margin-left: 5px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          &:hover {
+            color: $blue;
+            background-color: $nav-grey;
+          }
+          &.selected {
+            color: $blue;
+            background-color: $white;
+          }
+        }
       }
       .htab-right-panel {
+        padding-left: 20px;
         float: left;
-        width: calc(100% - 250px);
+        width: 80%;
         height: 100%;
       }
     }
