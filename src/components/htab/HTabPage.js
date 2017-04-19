@@ -19,10 +19,15 @@ class HTabPage extends React.Component {
       selectedClass += " selected";
     }
     // TODO: move bind to constructor
-    return (<div
-            key={index}
-            onClick={this.onSelectTab.bind(this, index)}
-            className={selectedClass}>{site.name}</div>);
+    return (
+      <div key={index} className={selectedClass} onClick={this.onSelectTab.bind(this, index)}>
+        <div className="site-content">{site.name}
+        </div>
+        {index%2 == 1 && <div className="warning-container">
+          <i className="smarticon icon-error"></i>
+        </div>}
+      </div>
+    );
   }
 
   onSelectTab(index) {
@@ -49,6 +54,9 @@ class HTabPage extends React.Component {
       <div className="page page-htab">
         <div className="htab-left-panel-ul">
           {sites.map(this.siteRowHeader)}
+          <div className="site-creation">
+            <i className="smarticon icon-add"></i>
+          </div>
         </div>
         {sites.map(this.siteRowContent)}
       </div>

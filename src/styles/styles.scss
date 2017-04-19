@@ -20,6 +20,7 @@ $turquoise: #009BA5;
 
 $white: #fff;
 $black: #000;
+$grey-b20: mix($grey, $black, 80%);
 
 #app {
   height: 100vh;
@@ -43,6 +44,7 @@ $black: #000;
         width: 20%;
         height: 100%;
         background-color: $grey;
+        box-shadow: 4px 4px 12px 2px #a3a3a3;
         .htab-left-panel-li {
           font-size: 24px;
           height: 56px;
@@ -59,6 +61,24 @@ $black: #000;
           &.selected {
             color: $blue;
             background-color: $white;
+          }
+          .site-content {
+            float: left;
+          }
+          .warning-container {
+            float: right;
+            padding-right: 10px;
+            color: $red;
+          }
+        }
+        .site-creation {
+          color: $green;
+          text-align: center;
+          height: 80px;
+          line-height: 80px;
+          font-size: 40px;
+          i {
+            cursor: pointer;
           }
         }
       }
