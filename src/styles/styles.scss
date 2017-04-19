@@ -25,6 +25,7 @@ $grey-b20: mix($grey, $black, 80%);
 #app {
   height: 100vh;
   padding: 20px;
+  padding-left: 0px;
   @include ProximaRegular-Regular;
   color: $dark-grey;
   ul {
@@ -32,6 +33,7 @@ $grey-b20: mix($grey, $black, 80%);
 
   .app-header {
     padding-bottom: 20px;
+    padding-left: 20px;
   }
   .app-container {
     height: 100%;
