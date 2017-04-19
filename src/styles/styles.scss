@@ -22,6 +22,11 @@ $white: #fff;
 $black: #000;
 $grey-b20: mix($grey, $black, 80%);
 
+.clearfix {
+  clear: both;
+  display: block;
+}
+
 #app {
   height: 100vh;
   padding: 20px;
@@ -69,20 +74,31 @@ $grey-b20: mix($grey, $black, 80%);
             float: left;
           }
           .warning-container {
-            margin-top: -2px;
+            line-height: 36px;
+            color: $white;
+            background-color: $red;
             float: right;
-            padding-right: 10px;
-            color: $red;
+            height: 38px;
+            width: 38px;
+            border-radius: 50%;
+            text-align: center;
+            margin: 9px;
+            font-size: 14px;
           }
         }
         .site-creation {
-          color: $green;
-          text-align: center;
-          height: 80px;
-          line-height: 80px;
-          font-size: 40px;
-          i {
-            cursor: pointer;
+          cursor: pointer;
+          padding-left:30px;
+          margin-top: 30px;
+          .site-creation-icon-container {
+            float: left;
+            font-size: 40px;
+            color: $green;
+          }
+          .site-creation-content {
+            float: left;
+            padding-left: 8px;
+            padding-top: 8px;
           }
         }
       }

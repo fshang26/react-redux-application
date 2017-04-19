@@ -23,9 +23,10 @@ class HTabPage extends React.Component {
       <div key={index} className={selectedClass} onClick={this.onSelectTab.bind(this, index)}>
         <div className="site-content">{site.name}
         </div>
-        {index%2 == 1 && <div className="warning-container">
-          <i className="smarticon icon-error"></i>
-        </div>}
+        {site.errorDevices !== 0 &&
+          <div className="warning-container">
+            {site.errorDevices}
+          </div>}
       </div>
     );
   }
@@ -55,7 +56,11 @@ class HTabPage extends React.Component {
         <div className="htab-left-panel-ul">
           {sites.map(this.siteRowHeader)}
           <div className="site-creation">
-            <i className="smarticon icon-add"></i>
+            <div className="site-creation-icon-container">
+              <i className="smarticon icon-add"></i>
+            </div>
+            <div className="site-creation-content">Add site</div>
+            <span className="clearfix"></span>
           </div>
         </div>
         {sites.map(this.siteRowContent)}
