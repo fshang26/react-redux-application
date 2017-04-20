@@ -4,7 +4,7 @@
 $dark-grey: #333;
 $nav-grey: #555;
 $grey: #ccc;
-$light-grey: #f9f9f9;
+$light-grey: #eee;
 
 $blue: #0079c1;
 $light-blue: #00a8df;
@@ -50,25 +50,35 @@ $grey-b20: mix($grey, $black, 80%);
         float: left;
         width: 20%;
         height: 100%;
-        background-color: $grey;
         padding-top: 5px;
-        box-shadow: 4px 4px 12px 2px #a3a3a3;
+        border-right: 1px solid $grey;
         .htab-left-panel-li {
           font-size: 24px;
-          height: 56px;
           line-height: 56px;
           cursor: pointer;
           padding-left: 10px;
           margin-left: 5px;
           border-top-left-radius: 8px;
           border-bottom-left-radius: 8px;
+          border-top: 1px solid $white;
+          border-bottom: 1px solid $white;
+          border-left: 1px solid $white;
           &:hover {
-            color: $blue;
-            background-color: $nav-grey;
+            background-color: $grey;
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            border-left: 1px solid $grey;
           }
           &.selected {
             color: $blue;
-            background-color: $white;
+            margin-right: -1px;
+            border-top: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            border-left: 1px solid $grey;
+            border-right: 1px solid $white;
+            &:hover {
+              border-right: 1px solid $grey;
+            }
           }
           .site-content {
             float: left;
@@ -88,8 +98,7 @@ $grey-b20: mix($grey, $black, 80%);
         }
         .site-creation {
           cursor: pointer;
-          padding-left:30px;
-          margin-top: 30px;
+          padding: 10px 0px 10px 10px;
           .site-creation-icon-container {
             float: left;
             font-size: 40px;

@@ -35,7 +35,8 @@ const sites = [{
   name: "USQAS",
   errorDevices: 0,
   description: "Praesent iaculis porta lectus quis luctus. Nulla maximus velit leo, ut iaculis nibh ultrices eu. Vivamus a arcu ex. Maecenas semper diam ac ullamcorper egestas. Integer efficitur consequat malesuada. Sed scelerisque porttitor consequat. Maecenas tincidunt augue non dui pharetra pharetra. Morbi mollis lorem a augue semper, ut dignissim nisi vestibulum. Sed blandit viverra quam, ac convallis ipsum pretium eu. Duis pretium in arcu ut molestie. Nam congue augue eget scelerisque commodo. Nunc porta imperdiet ipsum sed mattis. Etiam vitae pretium tortor. Vivamus in ornare risus, non cursus urna. Aliquam non urna tristique, aliquam est vel, porttitor ex. Proin convallis sem magna, convallis elementum lacus venenatis eu."
-}];
+}
+];
 
 class HTabSitesApi {
   static getAllSitess() {

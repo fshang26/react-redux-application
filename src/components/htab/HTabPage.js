@@ -7,7 +7,7 @@ class HTabPage extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      selectedIndex: 1
+      selectedIndex: 0
     };
     this.siteRowHeader = this.siteRowHeader.bind(this);
     this.siteRowContent = this.siteRowContent.bind(this);
@@ -27,6 +27,7 @@ class HTabPage extends React.Component {
           <div className="warning-container">
             {site.errorDevices}
           </div>}
+        <span className="clearfix"></span>
       </div>
     );
   }
@@ -54,7 +55,6 @@ class HTabPage extends React.Component {
     return (
       <div className="page page-htab">
         <div className="htab-left-panel-ul">
-          {sites.map(this.siteRowHeader)}
           <div className="site-creation">
             <div className="site-creation-icon-container">
               <i className="smarticon icon-add"></i>
@@ -62,6 +62,7 @@ class HTabPage extends React.Component {
             <div className="site-creation-content">Add site</div>
             <span className="clearfix"></span>
           </div>
+          {sites.map(this.siteRowHeader)}
         </div>
         {sites.map(this.siteRowContent)}
       </div>
