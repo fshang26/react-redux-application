@@ -1,4 +1,7 @@
-/* CSS sample style: test working in both dev and prod builds */
+/*
+ CSS sample style: test working in both dev and prod builds:in /src/index.js add:
+ import './styles/sample.css'; // Webpack can import CSS files too!
+*/
 
 .sampleClass {
   padding: 50px;

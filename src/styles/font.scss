@@ -1,4 +1,4 @@
-@import 'styleguide';
+@import 'guide';
 
 $ProximaFamily: "Proxima-Nova", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -34,7 +34,7 @@ $Proxima-XSmallH: 16;
 $Proxima-XXSmallS: 10;
 $Proxima-XXSmallH: 12;
 
-
+/* TODO: warning below property font is overwritten property font */
 @mixin ProximaRegular-Regular {
   $REMsize: #{$Proxima-RegularS / $REMdem}rem;
   $REMheight: #{$Proxima-RegularH / $REMdem}rem;
