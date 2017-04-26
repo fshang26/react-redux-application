@@ -72,6 +72,7 @@
         }
         .site-creation {
           cursor: pointer;
+          margin-left: 5px;
           padding: 10px 0px 10px 10px;
           .site-creation-icon-container {
             float: left;
@@ -82,6 +83,9 @@
             float: left;
             padding-left: 8px;
             padding-top: 8px;
+          }
+          &:hover {
+            background-color: $grey;
           }
         }
       }
